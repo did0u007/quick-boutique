@@ -25,4 +25,14 @@ class Product extends Model
         'cover',
         'is_active',
     ];
+
+    public function category()
+    {
+        $this->belongsTo(Category::class);
+    }
+
+    public function orders_detail()
+    {
+        $this->hasMany(OrderDetail::class);
+    }
 }

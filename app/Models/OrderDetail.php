@@ -22,4 +22,13 @@ class OrderDetail extends Model
         'amount',
 
     ];
+    public function order()
+    {
+        $this->hasOne(Order::class);
+    }
+
+    public function product()
+    {
+        $this->belongsTo(Product::class);
+    }
 }
